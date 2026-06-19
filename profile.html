@@ -1,0 +1,194 @@
+<!-- Profile Page -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profile · DiabPrevent</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="app-frame">
+  <div class="status-bar">
+    <span>9:41</span>
+    <span><i class="fas fa-signal"></i> <i class="fas fa-wifi"></i> <i class="fas fa-battery-three-quarters"></i></span>
+  </div>
+
+  <div class="header">
+    <h1><i class="fas fa-user"></i> Profile</h1>
+    <span style="cursor: pointer; font-size: 18px;"><i class="fas fa-cog"></i></span>
+  </div>
+
+  <div class="scroll-area">
+
+    <!-- User Header -->
+    <div class="card" style="text-align: center;">
+      <div style="width: 80px; height: 80px; background: linear-gradient(135deg, #1d7aa3, #2a9fcc); border-radius: 50%; margin: 0 auto 12px; display: flex; align-items: center; justify-content: center;">
+        <div style="font-size: 40px; color: white;"><i class="fas fa-user"></i></div>
+      </div>
+      <div style="font-weight: 700; font-size: 18px; color: #0a2942;">Sarah Mitchell</div>
+      <div style="font-size: 13px; color: #6a8aa5; margin-top: 4px;">Level 5 · Week 4/12</div>
+      <div style="display: flex; justify-content: center; gap: 14px; margin-top: 12px; font-size: 12px;">
+        <div style="text-align: center;">
+          <div style="font-weight: 700; color: #1d7aa3;">3,850</div>
+          <div style="color: #6a8aa5;">Points</div>
+        </div>
+        <div style="text-align: center;">
+          <div style="font-weight: 700; color: #2b7d4b;">8</div>
+          <div style="color: #6a8aa5;">Badges</div>
+        </div>
+        <div style="text-align: center;">
+          <div style="font-weight: 700; color: #dba42b;">#12</div>
+          <div style="color: #6a8aa5;">Rank</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Health Info -->
+    <div class="card">
+      <div class="card-header">
+        <h3><i class="fas fa-heart"></i> Health Information</h3>
+        <span class="badge">edit</span>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 12px;">
+        <div style="display: flex; justify-content: space-between; padding: 8px 0; border-bottom: 1px solid #e6edf5;">
+          <span style="color: #6a8aa5;">Age</span>
+          <span style="font-weight: 600; color: #153e5a;">34 years</span>
+        </div>
+        <div style="display: flex; justify-content: space-between; padding: 8px 0; border-bottom: 1px solid #e6edf5;">
+          <span style="color: #6a8aa5;">Weight</span>
+          <span style="font-weight: 600; color: #153e5a;">72.4 kg</span>
+        </div>
+        <div style="display: flex; justify-content: space-between; padding: 8px 0; border-bottom: 1px solid #e6edf5;">
+          <span style="color: #6a8aa5;">Height</span>
+          <span style="font-weight: 600; color: #153e5a;">5'6" (167 cm)</span>
+        </div>
+        <div style="display: flex; justify-content: space-between; padding: 8px 0; border-bottom: 1px solid #e6edf5;">
+          <span style="color: #6a8aa5;">BMI</span>
+          <span style="font-weight: 600; color: #153e5a;">23.4</span>
+        </div>
+        <div style="display: flex; justify-content: space-between; padding: 8px 0;">
+          <span style="color: #6a8aa5;">Risk Level</span>
+          <span style="font-weight: 600; color: #e07030;">Moderate</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Preferences -->
+    <div class="card">
+      <div class="card-header">
+        <h3><i class="fas fa-sliders-h"></i> Preferences</h3>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 12px;">
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+          <span style="color: #153e5a; font-weight: 500;">Notifications</span>
+          <div style="width: 40px; height: 24px; background: #2b7d4b; border-radius: 30px; cursor: pointer;"></div>
+        </div>
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+          <span style="color: #153e5a; font-weight: 500;">Dark Mode</span>
+          <div style="width: 40px; height: 24px; background: #d9e7f3; border-radius: 30px; cursor: pointer;"></div>
+        </div>
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+          <span style="color: #153e5a; font-weight: 500;">Share Stats</span>
+          <div style="width: 40px; height: 24px; background: #2b7d4b; border-radius: 30px; cursor: pointer;"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Achievements -->
+    <div class="card">
+      <div class="card-header">
+        <h3><i class="fas fa-trophy"></i> Achievements</h3>
+        <span class="badge">8/12</span>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px;">
+        <!-- Earned Badges -->
+        <div style="background: #f3e8d0; padding: 12px; border-radius: 16px; text-align: center;">
+          <div style="font-size: 28px; margin-bottom: 4px;"><i class="fas fa-star"></i></div>
+          <div style="font-size: 11px; font-weight: 600; color: #7a5d2b;">Week 1 Start</div>
+        </div>
+        <div style="background: #f3e8d0; padding: 12px; border-radius: 16px; text-align: center;">
+          <div style="font-size: 28px; margin-bottom: 4px;"><i class="fas fa-star"></i></div>
+          <div style="font-size: 11px; font-weight: 600; color: #7a5d2b;">Week 2 Done</div>
+        </div>
+        <div style="background: #f3e8d0; padding: 12px; border-radius: 16px; text-align: center;">
+          <div style="font-size: 28px; margin-bottom: 4px;"><i class="fas fa-dumbbell"></i></div>
+          <div style="font-size: 11px; font-weight: 600; color: #7a5d2b;">Active</div>
+        </div>
+        <div style="background: #f3e8d0; padding: 12px; border-radius: 16px; text-align: center;">
+          <div style="font-size: 28px; margin-bottom: 4px;"><i class="fas fa-apple-alt"></i></div>
+          <div style="font-size: 11px; font-weight: 600; color: #7a5d2b;">Healthy</div>
+        </div>
+        <div style="background: #f3e8d0; padding: 12px; border-radius: 16px; text-align: center;">
+          <div style="font-size: 28px; margin-bottom: 4px;"><i class="fas fa-tint"></i></div>
+          <div style="font-size: 11px; font-weight: 600; color: #7a5d2b;">Hydrated</div>
+        </div>
+        <div style="background: #f3e8d0; padding: 12px; border-radius: 16px; text-align: center;">
+          <div style="font-size: 28px; margin-bottom: 4px;"><i class="fas fa-book-open"></i></div>
+          <div style="font-size: 11px; font-weight: 600; color: #7a5d2b;">Learner</div>
+        </div>
+        <div style="background: #f3e8d0; padding: 12px; border-radius: 16px; text-align: center;">
+          <div style="font-size: 28px; margin-bottom: 4px;"><i class="fas fa-check-circle"></i></div>
+          <div style="font-size: 11px; font-weight: 600; color: #7a5d2b;">Consistent</div>
+        </div>
+        <div style="background: #f3e8d0; padding: 12px; border-radius: 16px; text-align: center;">
+          <div style="font-size: 28px; margin-bottom: 4px;"><i class="fas fa-heart"></i></div>
+          <div style="font-size: 11px; font-weight: 600; color: #7a5d2b;">Champion</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Support & Help -->
+    <div class="card">
+      <div class="card-header">
+        <h3><i class="fas fa-question-circle"></i> Support</h3>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 10px;">
+        <div style="padding: 10px; background: #f5f7fb; border-radius: 16px; cursor: pointer;">
+          <div class="flex-space">
+            <span style="color: #153e5a; font-weight: 500;">Contact Doctor</span>
+            <i class="fas fa-chevron-right" style="color: #6a8aa5;"></i>
+          </div>
+        </div>
+        <div style="padding: 10px; background: #f5f7fb; border-radius: 16px; cursor: pointer;">
+          <div class="flex-space">
+            <span style="color: #153e5a; font-weight: 500;">FAQ</span>
+            <i class="fas fa-chevron-right" style="color: #6a8aa5;"></i>
+          </div>
+        </div>
+        <div style="padding: 10px; background: #f5f7fb; border-radius: 16px; cursor: pointer;">
+          <div class="flex-space">
+            <span style="color: #153e5a; font-weight: 500;">Privacy & Settings</span>
+            <i class="fas fa-chevron-right" style="color: #6a8aa5;"></i>
+          </div>
+        </div>
+        <div style="padding: 10px; background: #f5f7fb; border-radius: 16px; cursor: pointer;">
+          <div class="flex-space">
+            <span style="color: #153e5a; font-weight: 500;">About</span>
+            <i class="fas fa-chevron-right" style="color: #6a8aa5;"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Logout -->
+    <button style="width: 100%; padding: 12px; background: #e07030; color: white; border: none; border-radius: 20px; font-weight: 600; cursor: pointer; margin-top: 8px; margin-bottom: 20px;">Logout</button>
+
+  </div>
+
+  <div class="footer-tab">
+    <i class="fas fa-home"></i>
+    <i class="fas fa-chart-simple"></i>
+    <i class="fas fa-book"></i>
+    <i class="fas fa-trophy"></i>
+    <i class="fas fa-user active"></i>
+  </div>
+  <div style="display: flex; justify-content: space-around; font-size: 10px; color: #6a8aa5; padding-bottom: 6px;">
+    <span>Home</span><span>Progress</span><span>Learn</span><span>Leader</span><span>Profile</span>
+  </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
