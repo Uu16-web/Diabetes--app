@@ -1,0 +1,176 @@
+<!-- Progress Page -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Progress · DiabPrevent</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="app-frame">
+  <div class="status-bar">
+    <span>9:41</span>
+    <span><i class="fas fa-signal"></i> <i class="fas fa-wifi"></i> <i class="fas fa-battery-three-quarters"></i></span>
+  </div>
+
+  <div class="header">
+    <h1><i class="fas fa-chart-line"></i> Progress</h1>
+    <span class="week-badge"><i class="far fa-calendar-alt"></i> Week 4/12</span>
+  </div>
+
+  <div class="scroll-area">
+
+    <!-- Weekly Stats Overview -->
+    <div class="card">
+      <div class="card-header">
+        <h3><i class="fas fa-chart-bar"></i> Weekly Summary</h3>
+        <span class="badge">this week</span>
+      </div>
+      <div style="display: flex; justify-content: space-around; text-align: center; gap: 12px;">
+        <div style="flex: 1;">
+          <div style="font-size: 24px; font-weight: 700; color: #1d7aa3;">4,200</div>
+          <div style="font-size: 11px; color: #6a8aa5; margin-top: 4px;"><i class="fas fa-walking"></i> Steps</div>
+        </div>
+        <div style="flex: 1;">
+          <div style="font-size: 24px; font-weight: 700; color: #1d7aa3;">1.8L</div>
+          <div style="font-size: 11px; color: #6a8aa5; margin-top: 4px;"><i class="fas fa-tint"></i> Water</div>
+        </div>
+        <div style="flex: 1;">
+          <div style="font-size: 24px; font-weight: 700; color: #1d7aa3;">98</div>
+          <div style="font-size: 11px; color: #6a8aa5; margin-top: 4px;"><i class="fas fa-heartbeat"></i> Glucose</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Goal Progress Bars -->
+    <div class="card">
+      <div class="card-header">
+        <h3><i class="fas fa-target"></i> Goals</h3>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 14px;">
+        <div>
+          <div class="flex-space" style="margin-bottom: 6px;">
+            <span style="font-weight: 600; color: #153e5a;">Daily Steps</span>
+            <span style="font-size: 12px; color: #6a8aa5;">4,200 / 8,000</span>
+          </div>
+          <div style="background: #d9e7f3; border-radius: 40px; height: 10px; width: 100%;">
+            <div style="background: linear-gradient(90deg, #1d7aa3, #2a9fcc); width: 52.5%; height: 10px; border-radius: 40px;"></div>
+          </div>
+        </div>
+        <div>
+          <div class="flex-space" style="margin-bottom: 6px;">
+            <span style="font-weight: 600; color: #153e5a;">Water Intake</span>
+            <span style="font-size: 12px; color: #6a8aa5;">1.8L / 2.5L</span>
+          </div>
+          <div style="background: #d9e7f3; border-radius: 40px; height: 10px; width: 100%;">
+            <div style="background: linear-gradient(90deg, #1d7aa3, #2a9fcc); width: 72%; height: 10px; border-radius: 40px;"></div>
+          </div>
+        </div>
+        <div>
+          <div class="flex-space" style="margin-bottom: 6px;">
+            <span style="font-weight: 600; color: #153e5a;">Glucose Average</span>
+            <span style="font-size: 12px; color: #6a8aa5;">98 mg/dL / 110 mg/dL</span>
+          </div>
+          <div style="background: #d9e7f3; border-radius: 40px; height: 10px; width: 100%;">
+            <div style="background: linear-gradient(90deg, #2b7d4b, #3ba855); width: 89%; height: 10px; border-radius: 40px;"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Completion Rate -->
+    <div class="card">
+      <div class="card-header">
+        <h3><i class="fas fa-check-circle"></i> Completion Rate</h3>
+        <span class="badge">68%</span>
+      </div>
+      <div style="text-align: center; padding: 20px 0;">
+        <div style="font-size: 48px; font-weight: 700; color: #1d7aa3;">68<span style="font-size: 28px;">%</span></div>
+        <div style="font-size: 13px; color: #6a8aa5; margin-top: 8px;">of program completed</div>
+      </div>
+      <div style="display: flex; justify-content: space-around; font-size: 12px; color: #153e5a;">
+        <span><i class="fas fa-graduation-cap"></i> Modules: 3/12</span>
+        <span><i class="fas fa-tasks"></i> Activities: 42/60</span>
+        <span><i class="fas fa-award"></i> Badges: 4/12</span>
+      </div>
+    </div>
+
+    <!-- Health Metrics Trend -->
+    <div class="card">
+      <div class="card-header">
+        <h3><i class="fas fa-heartbeat"></i> Health Metrics</h3>
+        <span class="badge">last 4 weeks</span>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 12px;">
+        <div>
+          <div class="flex-space" style="margin-bottom: 6px; font-size: 13px;">
+            <span style="font-weight: 600; color: #153e5a;">Weight</span>
+            <span style="color: #2b7d4b;">↓ 0.6 kg</span>
+          </div>
+          <div style="display: flex; gap: 2px; align-items: flex-end; height: 40px;">
+            <div style="flex: 1; background: #d9e7f3; border-radius: 4px; height: 100%;"></div>
+            <div style="flex: 1; background: #c3d9ec; border-radius: 4px; height: 85%;"></div>
+            <div style="flex: 1; background: #a8c8e1; border-radius: 4px; height: 70%;"></div>
+            <div style="flex: 1; background: #1d7aa3; border-radius: 4px; height: 50%;"></div>
+          </div>
+        </div>
+        <div>
+          <div class="flex-space" style="margin-bottom: 6px; font-size: 13px;">
+            <span style="font-weight: 600; color: #153e5a;">Glucose Level</span>
+            <span style="color: #2b7d4b;">↓ 2%</span>
+          </div>
+          <div style="display: flex; gap: 2px; align-items: flex-end; height: 40px;">
+            <div style="flex: 1; background: #d9e7f3; border-radius: 4px; height: 100%;"></div>
+            <div style="flex: 1; background: #c3d9ec; border-radius: 4px; height: 95%;"></div>
+            <div style="flex: 1; background: #a8c8e1; border-radius: 4px; height: 90%;"></div>
+            <div style="flex: 1; background: #1d7aa3; border-radius: 4px; height: 88%;"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Activity History -->
+    <div class="card">
+      <div class="card-header">
+        <h3><i class="fas fa-history"></i> Recent Activities</h3>
+        <span class="badge">this week</span>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 10px; font-size: 13px;">
+        <div class="flex-space" style="padding: 8px 0; border-bottom: 1px solid #e6edf5;">
+          <span><i class="fas fa-utensils" style="color: #2a7faa; width: 16px;"></i> Logged breakfast</span>
+          <span style="color: #6a8aa5;">2 hours ago</span>
+        </div>
+        <div class="flex-space" style="padding: 8px 0; border-bottom: 1px solid #e6edf5;">
+          <span><i class="fas fa-walking" style="color: #2a7faa; width: 16px;"></i> 45 min walk</span>
+          <span style="color: #6a8aa5;">4 hours ago</span>
+        </div>
+        <div class="flex-space" style="padding: 8px 0; border-bottom: 1px solid #e6edf5;">
+          <span><i class="fas fa-tint" style="color: #2a7faa; width: 16px;"></i> Water logged</span>
+          <span style="color: #6a8aa5;">6 hours ago</span>
+        </div>
+        <div class="flex-space" style="padding: 8px 0;">
+          <span><i class="fas fa-book-open" style="color: #2a7faa; width: 16px;"></i> Completed module 3</span>
+          <span style="color: #6a8aa5;">1 day ago</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="footer-tab">
+    <i class="fas fa-home"></i>
+    <i class="fas fa-chart-simple active"></i>
+    <i class="fas fa-book"></i>
+    <i class="fas fa-trophy"></i>
+    <i class="fas fa-user"></i>
+  </div>
+  <div style="display: flex; justify-content: space-around; font-size: 10px; color: #6a8aa5; padding-bottom: 6px;">
+    <span>Home</span><span>Progress</span><span>Learn</span><span>Leader</span><span>Profile</span>
+  </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
