@@ -1,0 +1,161 @@
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+  background: #e8f0f9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 16px;
+}
+
+/* Mobile Frame */
+.app-frame {
+  max-width: 390px;
+  width: 100%;
+  background: #ffffff;
+  border-radius: 40px 40px 28px 28px;
+  box-shadow: 0 20px 50px rgba(0, 20, 40, 0.2);
+  overflow: hidden;
+  position: relative;
+  padding-bottom: 20px;
+}
+
+/* Status Bar */
+.status-bar {
+  padding: 14px 20px 6px 20px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  font-weight: 600;
+  color: #1c3a5a;
+  background: white;
+}
+
+/* Header */
+.header {
+  padding: 8px 20px 12px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #eef3f8;
+}
+
+.header h1 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #0a2942;
+  letter-spacing: -0.3px;
+}
+
+.header h1 i {
+  color: #2a7faa;
+  margin-right: 6px;
+}
+
+.header .week-badge {
+  background: #d4e3f0;
+  padding: 6px 14px;
+  border-radius: 30px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #0f3b5c;
+}
+
+/* Scroll Area */
+.scroll-area {
+  padding: 16px 18px 10px 18px;
+  max-height: 680px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.scroll-area::-webkit-scrollbar {
+  width: 4px;
+}
+
+.scroll-area::-webkit-scrollbar-thumb {
+  background: #b0cbd9;
+  border-radius: 12px;
+}
+
+/* Cards */
+.card {
+  background: #f9fcff;
+  border-radius: 24px;
+  padding: 16px 16px 14px 16px;
+  box-shadow: 0 4px 12px rgba(0, 30, 50, 0.04);
+  border: 1px solid #e6edf5;
+  transition: all 0.1s;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.card-header h3 {
+  font-size: 16px;
+  font-weight: 700;
+  color: #153e5a;
+  letter-spacing: -0.2px;
+}
+
+.card-header h3 i {
+  color: #2a7faa;
+  margin-right: 8px;
+  width: 20px;
+}
+
+.card-header .badge {
+  background: #d9e6f2;
+  padding: 4px 12px;
+  border-radius: 40px;
+  font-size: 11px;
+  font-weight: 600;
+  color: #1e5075;
+}
+
+/* Footer Navigation */
+.footer-tab {
+  display: flex;
+  justify-content: space-around;
+  background: white;
+  padding: 10px 12px 4px;
+  border-top: 1px solid #e1eaf3;
+  margin-top: 8px;
+}
+
+.footer-tab i {
+  font-size: 20px;
+  color: #779bb8;
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+.footer-tab i.active {
+  color: #1d6d99;
+  font-weight: 700;
+}
+
+/* Utility Classes */
+.flex-space {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.mt-1 { margin-top: 6px; }
+.mb-1 { margin-bottom: 6px; }
+.w-100 { width: 100%; }
+.text-muted { color: #53778f; font-size: 12px; }
