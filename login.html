@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login · DiabPrevent</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #e8f0f9, #d4e3f0);
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .login-container {
+      max-width: 400px;
+      width: 100%;
+      background: white;
+      border-radius: 30px;
+      box-shadow: 0 20px 60px rgba(0, 20, 40, 0.15);
+      padding: 40px 30px;
+    }
+
+    .logo {
+      text-align: center;
+      font-size: 50px;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #0a2942;
+      font-size: 28px;
+      margin-bottom: 10px;
+    }
+
+    .subtitle {
+      text-align: center;
+      color: #6a8aa5;
+      font-size: 13px;
+      margin-bottom: 30px;
+    }
+
+    .form-group {
+      margin-bottom: 18px;
+    }
+
+    label {
+      display: block;
+      color: #153e5a;
+      font-weight: 600;
+      font-size: 13px;
+      margin-bottom: 8px;
+    }
+
+    input {
+      width: 100%;
+      padding: 12px 14px;
+      border: 1.5px solid #d9e6f2;
+      border-radius: 16px;
+      font-size: 14px;
+      transition: all 0.3s;
+      background: #f9fcff;
+    }
+
+    input:focus {
+      outline: none;
+      border-color: #1d7aa3;
+      background: white;
+      box-shadow: 0 0 0 3px rgba(29, 122, 163, 0.1);
+    }
+
+    .btn-primary {
+      width: 100%;
+      padding: 13px;
+      background: linear-gradient(135deg, #1d7aa3, #2a9fcc);
+      color: white;
+      border: none;
+      border-radius: 16px;
+      font-weight: 600;
+      font-size: 15px;
+      cursor: pointer;
+      transition: all 0.3s;
+      margin-top: 10px;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 30px rgba(29, 122, 163, 0.3);
+    }
+
+    .btn-primary:active {
+      transform: translateY(0);
+    }
+
+    .toggle-form {
+      text-align: center;
+      margin-top: 20px;
+      font-size: 13px;
+      color: #6a8aa5;
+    }
+
+    .toggle-form a {
+      color: #1d7aa3;
+      text-decoration: none;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    .toggle-form a:hover {
+      text-decoration: underline;
+    }
+
+    .form-section {
+      display: none;
+    }
+
+    .form-section.active {
+      display: block;
+    }
+
+    .error {
+      background: #fee;
+      border-left: 4px solid #e07030;
+      color: #c53030;
+      padding: 12px;
+      border-radius: 8px;
+      font-size: 13px;
+      margin-bottom: 16px;
+      display: none;
+    }
+
+    .error.show {
+      display: block;
+    }
+
+    .success {
+      background: #f0f8f4;
+      border-left: 4px solid #2b7d4b;
+      color: #2b7d4b;
+      padding: 12px;
+      border-radius: 8px;
+      font-size: 13px;
+      margin-bottom: 16px;
+      display: none;
+    }
+
+    .success.show {
+      display: block;
+    }
+
+    .loading {
+      display: none;
+      text-align: center;
+      padding: 20px;
+      color: #6a8aa5;
+    }
+
+    .spinner {
+      border: 3px solid #d9e6f2;
+      border-top-color: #1d7aa3;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      animation: spin 1s linear infinite;
+      margin: 0 auto 10px;
+    }
+
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+  </style>
+</head>
+<body>
+<div class="login-container">
+  <div class="logo">
+    <i class="fas fa-heartbeat" style="color: #1d7aa3;"></i>
+  </div>
+
+  <h1>DiabPrevent</h1>
+  <p class="subtitle">12-Week Diabetes Prevention Program</p>
+
+  <!-- Error Message -->
+  <div class="error" id="errorMsg"></div>
+  <div class="success" id="successMsg"></div>
+
+  <!-- LOGIN FORM -->
+  <div class="form-section active" id="loginForm">
+    <div class="form-group">
+      <label for="loginEmail">Email Address</label>
+      <input type="email" id="loginEmail" placeholder="your@email.com" required>
+    </div>
+
+    <div class="form-group">
+      <label for="loginPassword">Password</label>
+      <input type="password" id="loginPassword" placeholder="••••••••" required>
+    </div>
+
+    <button class="btn-primary" onclick="handleLogin()">Sign In</button>
+
+    <div class="toggle-form">
+      Don't have an account? <a onclick="toggleForms()">Create one</a>
+    </div>
+  </div>
+
+  <!-- REGISTER FORM -->
+  <div class="form-section" id="registerForm">
+    <div class="form-group">
+      <label for="regFirstName">First Name</label>
+      <input type="text" id="regFirstName" placeholder="John" required>
+    </div>
+
+    <div class="form-group">
+      <label for="regLastName">Last Name</label>
+      <input type="text" id="regLastName" placeholder="Doe" required>
+    </div>
+
+    <div class="form-group">
+      <label for="regEmail">Email Address</label>
+      <input type="email" id="regEmail" placeholder="your@email.com" required>
+    </div>
+
+    <div class="form-group">
+      <label for="regPassword">Password</label>
+      <input type="password" id="regPassword" placeholder="••••••••" required>
+    </div>
+
+    <div class="form-group">
+      <label for="regConfirmPassword">Confirm Password</label>
+      <input type="password" id="regConfirmPassword" placeholder="••••••••" required>
+    </div>
+
+    <button class="btn-primary" onclick="handleRegister()">Create Account</button>
+
+    <div class="toggle-form">
+      Already have an account? <a onclick="toggleForms()">Sign in</a>
+    </div>
+  </div>
+
+  <!-- Loading State -->
+  <div class="loading" id="loading">
+    <div class="spinner"></div>
+    <p>Processing...</p>
+  </div>
+</div>
+
+<script src="api.js"></script>
+<script>
+  function toggleForms() {
+    document.getElementById('loginForm').classList.toggle('active');
+    document.getElementById('registerForm').classList.toggle('active');
+    clearMessages();
+  }
+
+  function showError(message) {
+    const errorDiv = document.getElementById('errorMsg');
+    errorDiv.textContent = message;
+    errorDiv.classList.add('show');
+  }
+
+  function showSuccess(message) {
+    const successDiv = document.getElementById('successMsg');
+    successDiv.textContent = message;
+    successDiv.classList.add('show');
+  }
+
+  function clearMessages() {
+    document.getElementById('errorMsg').classList.remove('show');
+    document.getElementById('successMsg').classList.remove('show');
+  }
+
+  function showLoading(show) {
+    document.getElementById('loading').style.display = show ? 'block' : 'none';
+  }
+
+  async function handleLogin() {
+    clearMessages();
+    const email = document.getElementById('loginEmail').value;
+    const password = document.getElementById('loginPassword').value;
+
+    if (!email || !password) {
+      showError('Please fill in all fields');
+      return;
+    }
+
+    try {
+      showLoading(true);
+      await api.login(email, password);
+      showSuccess('Login successful! Redirecting...');
+      setTimeout(() => {
+        window.location.href = 'index.html';
+      }, 1500);
+    } catch (error) {
+      showError(error.message || 'Login failed. Please try again.');
+      showLoading(false);
+    }
+  }
+
+  async function handleRegister() {
+    clearMessages();
+    const firstName = document.getElementById('regFirstName').value;
+    const lastName = document.getElementById('regLastName').value;
+    const email = document.getElementById('regEmail').value;
+    const password = document.getElementById('regPassword').value;
+    const confirmPassword = document.getElementById('regConfirmPassword').value;
+
+    if (!firstName || !lastName || !email || !password || !confirmPassword) {
+      showError('Please fill in all fields');
+      return;
+    }
+
+    if (password !== confirmPassword) {
+      showError('Passwords do not match');
+      return;
+    }
+
+    if (password.length < 6) {
+      showError('Password must be at least 6 characters');
+      return;
+    }
+
+    try {
+      showLoading(true);
+      await api.register(firstName, lastName, email, password);
+      showSuccess('Account created! Redirecting...');
+      setTimeout(() => {
+        window.location.href = 'index.html';
+      }, 1500);
+    } catch (error) {
+      showError(error.message || 'Registration failed. Please try again.');
+      showLoading(false);
+    }
+  }
+
+  // Handle Enter key
+  document.addEventListener('keypress', (e) => {
+    if (e.key === 'Enter') {
+      if (document.getElementById('loginForm').classList.contains('active')) {
+        handleLogin();
+      } else {
+        handleRegister();
+      }
+    }
+  });
+
+  // Demo credentials (for testing without backend)
+  console.log('Demo credentials: email: demo@example.com, password: 123456');
+</script>
+</body>
+</html>
